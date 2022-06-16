@@ -5,7 +5,7 @@
     <ProjectGuid>e44ea0c8-0f02-443d-bcba-223651006c2e</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Reinforcement.py</StartupFile>
+    <StartupFile>AtariRL\AtariRLTrain.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,11 +22,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AtariRL\AtariRLEnv.py" />
+    <Compile Include="AtariRL\AtariRLTest.py" />
+    <Compile Include="AtariRL\AtariRLTrain.py" />
     <Compile Include="Classification.py" />
     <Compile Include="Regression.py" />
     <Compile Include="Reinforcement.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AtariRL\" />
+    <Folder Include="AtariRL\Saved Models\" />
     <Folder Include="Training\Logs\" />
     <Folder Include="Training\" />
     <Folder Include="Training\Saved Models\" />
