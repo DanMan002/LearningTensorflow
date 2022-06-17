@@ -12,9 +12,9 @@ import os
 environment_name = "Breakout-v4"
 #env = gym.make(environment_name, render_mode='human')
 #env = DummyVecEnv([lambda: env])
-env = make_vec_env(environment_name, n_envs=4, seed=0)
+env = make_atari_env(environment_name, n_envs=4, seed=0)
 env = VecFrameStack(env, n_stack=4)
-a2c_path = os.path.join('AtariRL', 'Saved Models', 'A2C_model2')
+a2c_path = os.path.join('AtariRL', 'Saved Models', 'A2C_model3')
 print(a2c_path)
 if(exists(a2c_path+".zip")):
     model = A2C.load(a2c_path, env=env)
@@ -24,3 +24,4 @@ else:
     print("New model!\n")
 model.learn(total_timesteps=200000)
 model.save(a2c_path)
+

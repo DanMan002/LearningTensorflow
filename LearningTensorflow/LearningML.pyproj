@@ -5,7 +5,7 @@
     <ProjectGuid>e44ea0c8-0f02-443d-bcba-223651006c2e</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>AtariRL\AtariRLTrain.py</StartupFile>
+    <StartupFile>AtariRL\AtariRLTest.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
