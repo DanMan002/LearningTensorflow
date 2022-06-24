@@ -8,12 +8,12 @@ import os
 
 environment_name = "Breakout-v4"
 #env = gym.make(environment_name, render_mode='human')
-env = make_atari_env(environment_name, n_envs=1, seed=0)
+env = make_atari_env(environment_name, n_envs=1, seed=0, render_mode='human')
 env = VecFrameStack(env, n_stack=4)
-env.render_mode='human'
-a2c_path = os.path.join('AtariRL', 'Saved Models', 'A2C_model3')
+#env.render_mode='human'
+a2c_path = os.path.join('AtariRL', 'Saved Models', 'A2C_model4')
 model = A2C.load(a2c_path, env=env)
-print(evaluate_policy(model, env, n_eval_episodes=10, render=True))
+print(evaluate_policy(model, env, n_eval_episodes=10))
 #episodes = 10
 #for episode in range(1, episodes+1):
 #    obs = env.reset()
